@@ -1,10 +1,10 @@
 import { AppShell } from './components/layout/AppShell'
-import { Dashboard } from './pages/Dashboard'
+import { ClientPortalPage } from './pages/ClientPortalPage'
 
 function App() {
   return (
     <AppShell>
-      <Dashboard />
+      <ClientPortalPage />
     </AppShell>
   )
 }
