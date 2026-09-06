@@ -1,12 +1,7 @@
-import { AppShell } from './components/layout/AppShell'
-import { ClientPortalPage } from './pages/ClientPortalPage'
+import { AppRoutes } from './routes/AppRoutes'
 
 function App() {
-  return (
-    <AppShell>
-      <ClientPortalPage />
-    </AppShell>
-  )
+  return <AppRoutes />
 }
 
 export default App

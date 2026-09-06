@@ -7,7 +7,7 @@ import {
 
 import { MetricCard } from '../components/dashboard/MetricCard'
 
-export function Dashboard() {
+export function DashboardPage() {
   return (
     <div className="space-y-8">
       <section>
