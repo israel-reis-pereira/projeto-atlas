@@ -6,28 +6,35 @@ import {
   UserRound,
 } from 'lucide-react'
 
+import { Link } from 'react-router-dom'
+
 const settingsItems = [
   {
     title: 'Dados da empresa',
     description: 'Informações cadastrais e dados da Rota Verde Ambiental.',
     icon: Building2,
+    to: '/configuracoes/empresa',
   },
   {
     title: 'Perfil do usuário',
     description: 'Nome, e-mail e preferências do usuário atual.',
     icon: UserRound,
+    to: '/configuracoes/perfil',
   },
   {
     title: 'Notificações',
     description: 'Configure quais avisos deseja receber durante a operação.',
     icon: Bell,
+    to: '/configuracoes/notificacoes',
   },
   {
     title: 'Segurança e acesso',
     description: 'Senha, autenticação e configurações de acesso.',
     icon: LockKeyhole,
+    to: '/configuracoes/seguranca',
   },
 ]
+
 
 export function SettingsPage() {
   return (
@@ -58,7 +65,8 @@ export function SettingsPage() {
             const Icon = item.icon
 
             return (
-              <button
+              <Link
+                to={item.to}
                 key={item.title}
                 type="button"
                 className="flex w-full items-center gap-4 p-6 text-left transition hover:bg-[#FAFCFB]"
@@ -86,7 +94,7 @@ export function SettingsPage() {
                   className="shrink-0 text-[#94A19A]"
                   strokeWidth={1.8}
                 />
-              </button>
+              </Link>
             )
           })}
         </div>
